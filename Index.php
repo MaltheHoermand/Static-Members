@@ -1,21 +1,10 @@
 <?php
 
-require_once "classes/Product.php";
+require_once "classes/Calculator.php";
+
+print ("Add 5 + 3: ".Calculator::sum([5, 3])."<br>");
+print ("Subtract 5 + 3: ".Calculator::subtract(5, 3)."<br>");
+print ("Multiply 5 + 3: ".Calculator::multiply([5, 3])."<br>");
+print ("Divide 5 + 3: ".Calculator::divide(5, 3)."<br>");
 
 
-
-$gta5 = new Product();
-$gta5->title = "GTA V";
-$gta5->price = 299;
-
-$cyberpunk = new Product();
-$cyberpunk->title = "CyberPunk 2077";
-$cyberpunk->price = 499;
-
-// Her sættes $shipping til en ny værdi
-Product::$shipping = 40;
-
-var_dump($gta5);
-var_dump($cyberpunk);
-
-print (Product::$shipping);
